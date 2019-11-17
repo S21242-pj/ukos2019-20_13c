@@ -1,0 +1,30 @@
+Dzisiaj na zajeciach nauczyliśmy się jak postawić localny server ssh ( zamiast szuflandi która
+nawaliła i nie działa )
+
+Komendy do nauczenia itd.
+sudo apt-get install ssh
+cd ~/workspace itd
+git init --bare
+cd git-repos
+mkdir -p workspace git-repos
+ssh localhost
+cat id_rsa.pub >> authorized_keys
+
+zeby podlaczyc sie trzeba login i haslo ale uzytkownik nie ma ssh 
+keygen.pub-wyslac na sever 
+cat id_rsa.pub >> authorized_keys
+ssh localhost
+haslo xxxxx
+
+ssh agent bez phasepass
+
+exit
+eval $(ssh-agent)
+ssh-add -l zeby zobaczyc czy juz sa
+ssh-add ~/.ssh/id_rsa
+xxxxx
+aagent zapamietuje klcuz ssh i haslo do niego.
+
+aby nie wpisywac za kazdym razem ( nie logowac sie) to wystarczy to .bashrc wpisac agenta
+
+
